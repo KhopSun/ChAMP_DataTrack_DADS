@@ -32,3 +32,46 @@ SELECT *
 FROM Log_Traffy_Cases
 WHERE (state = 'reported' OR state = 'finished')
 AND timestamp > TIMESTAMP '2024-01-01 00:00:00';
+
+
+-- 3) Grouping
+
+SELECT district, COUNT(DISTINCT ticket_id) AS ticket_count
+FROM Traffy_Cases
+GROUP BY district
+
+SELECT [type], SUM(STAR) AS sum_star, MAX(STAR) AS max_star
+FROM Traffy_Cases
+GROUP BY [type];
+
+-- 4) Ordering
+
+SELECT district, COUNT(DISTINCT ticket_id) AS ticket_count
+FROM Traffy_Cases
+GROUP BY district
+ORDER BY ticket_count DESC;
+
+SELECT * 
+FROM 
+(
+    SELECT district, COUNT(DISTINCT ticket_id) AS ticket_count 
+    FROM Traffy_Cases 
+    GROUP BY district
+) 
+AS CNT_TICKET
+WHERE ticket_count > 100;
+
+
+-- 5) Join
+
+WITH CASES AS (SELECT * FROM Traffy_Cases), LOG AS (SELECT * FROM Log_Traffy_Cases)
+SELECT *
+FROM CASES c
+LEFT JOIN LOG t
+ON c.ticket_id = t.ticket_id
+
+
+-- 6) Challenge
+-- Look at the status and timestamp columns. 
+-- What are the durations between each status?
+-- Create a table with the derived columns.
