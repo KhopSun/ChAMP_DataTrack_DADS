@@ -1,3 +1,5 @@
+-- Did this in DBeaver
+
 -- 0) Create Tables
 
 CREATE OR REPLACE TABLE Traffy_Cases AS
