@@ -2,6 +2,8 @@
 
 This **Data Science & Analysis** project is part of the **ChAMP Engineering Data Track**, utilizing real-world data from **Bangkok Metropolitan Administration (กทม)** to identify insights, diagnose potential inefficiencies, and propose actionable solutions regarding case resolution times.
 
+**Dataset Period:** May 2022 - December 2024
+
 ---
 
 ## 🚀 Project Overview
@@ -68,6 +70,17 @@ From correlation analysis, the following variables show a **positive relationshi
 - **Process Streamlining:** Identify types of **organizational actions** that contribute to longer delays and optimize workflows. Possible solutions for this include clearly defining the area of responsibilities for each organization so that users would know to whom the cases should be reported, while the organizations know which cases they are responsible for.
 - **Prioritization Strategy:** Focus on **frequently reopened cases** and introduce measures to resolve them effectively. This can help prevent similar cases being repeatedly reopened as well.
 - **Public Engagement Analysis:** Evaluate whether high **view counts** correlate with complex cases and allocate resources accordingly. This shows that people are interested to know whether the particular cases are resolved or not.
+
+---
+
+## 🔍 Further Considerations
+While the current analysis focuses on **outlier detection and correlations**, additional factors could improve our insights:
+
+- **Geospatial Correlations:** Analyzing case duration in relation to **district and subdistrict** could help determine if certain locations experience systemic delays.
+- **Organizational Proximity Analysis:** Incorporating the **physical location of responsible organizations** could help assess whether **proximity affects response times**.
+- **Time-Based Trends:** Examining whether **certain times of the year or specific days of the week** impact response efficiency.
+
+Incorporating these additional analyses could further refine our understanding of case resolution inefficiencies and guide more effective solutions.
 
 ---
 
