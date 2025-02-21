@@ -34,6 +34,8 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 4. **คลองเตย** 
 5. **วัฒนา**
 
+(A Capture of plotly express interactive choropleth map)
+
 ![Heatmap Districts](heatmap_bkk_districts.png)
 
 ### 🏘️ Top 5 Subdistricts with the Most Cases
@@ -41,7 +43,9 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 2. **ดินแดง** 
 3. **สามเสนใน** 
 4. **ประเวศ** 
-5. **อนุสาวรีย์** 
+5. **อนุสาวรีย์**
+
+(A Capture of plotly express interactive choropleth map)
 
 ![Heatmap Subdistricts](heatmap_bkk_subdistricts.png)
 
