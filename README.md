@@ -1,5 +1,4 @@
-# 🕒 ChAMP Engineering Data Track: 
-# Case Duration Outlier Detection & Correlation Analysis (Traffy Fondou)
+# 🕒 ChAMP Engineering Data Track: Case Duration Outlier Detection & Correlation Analysis (Traffy Fondou)
 
 This **Data Science & Analysis** project is part of the **ChAMP Engineering Data Track**, utilizing real-world data from **กรุงเทพมหานคร (กทม)** to identify insights, diagnose potential inefficiencies, and propose actionable solutions regarding case resolution times.
 
