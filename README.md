@@ -93,6 +93,8 @@ The project incorporates **Isolation Forest**, an unsupervised anomaly detection
   - Detects anomalies **without requiring predefined thresholds**.
   - Identifies both **upper and lower outliers**, making it ideal for this analysis.
 
+![Correlation Heatmap fromML](correlation_heatmap_fromML.png)
+
 ---
 
 ## 🛠️ Technologies Used
