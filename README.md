@@ -54,17 +54,20 @@ Certain case types exhibit **skewed resolution times**, leading to **delays** in
 
 ![Skewness Barchart](skewness_barchart.png)
 
-
 ### 📊 Factors Affecting Case Duration
 From correlation analysis, the following variables show a **positive relationship** with longer case durations:
+- **Organizations Involved (`organization_action_len`)** → More organization being involved may correlate with inefficiencies in processing.
 - **Number of Reopens (`count_reopen`)** → Cases that are repeatedly reopened take significantly longer to resolve.
 - **View Count (`view_count`)** → High public engagement might indicate complex cases requiring more time.
-- **Organization Action Length (`organization_action_len`)** → More organization being involved may correlate with inefficiencies in processing.
+
+(An example of correlation heatmap for a type of issue)
+
+![Correlation Heatmap Example](correlation_heatmap_example.png)
 
 ### 💡 Suggested Solutions
-- **Process Streamlining:** Identify types of **organizational actions** that contribute to longer delays and optimize workflows.
-- **Prioritization Strategy:** Focus on **frequently reopened cases** and introduce measures to resolve them effectively.
-- **Public Engagement Analysis:** Evaluate whether high **view counts** correlate with complex cases and allocate resources accordingly.
+- **Process Streamlining:** Identify types of **organizational actions** that contribute to longer delays and optimize workflows. Possible solutions for this include clearly defining the area of responsibilities for each organization so that users would know to whom the cases should be reported, while the organizations know which cases they are responsible for.
+- **Prioritization Strategy:** Focus on **frequently reopened cases** and introduce measures to resolve them effectively. This can help prevent similar cases being repeatedly reopened as well.
+- **Public Engagement Analysis:** Evaluate whether high **view counts** correlate with complex cases and allocate resources accordingly. This shows that people are interested to know whether the particular cases are resolved or not.
 
 ---
 
