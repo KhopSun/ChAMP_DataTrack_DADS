@@ -34,6 +34,8 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 4. **คลองเตย** 
 5. **วัฒนา**
 
+![Heatmap Districts](heatmap_bkk_districts.png)
+
 ### 🏘️ Top 5 Subdistricts with the Most Cases
 1. **สวนหลวง** 
 2. **ดินแดง** 
@@ -41,6 +43,7 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 4. **ประเวศ** 
 5. **อนุสาวรีย์** 
 
+![Heatmap Subdistricts](heatmap_bkk_subdistricts.png)
 
 ### 🌆 Case Types Skewness and Outliers
 Certain case types exhibit **skewed resolution times**, leading to **delays** in their resolution.
