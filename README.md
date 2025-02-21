@@ -44,6 +44,7 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 
 ### 🌆 Case Types Skewness and Outliers
 Certain case types exhibit **skewed resolution times**, leading to **delays** in their resolution.
+
 ![Skewness Barchart](skewness_barchart.png)
 
 
