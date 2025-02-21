@@ -73,4 +73,4 @@ The project incorporates **Isolation Forest**, an unsupervised anomaly detection
 ---
 
 ## 🌟 Acknowledgements
-Special thanks to my professor, fellow classmates, and the entire data science community for their support and contributions!
+Special thanks to my ChAMP Engineering, Data Track Mentors, fellow Mentees, and Bangkok Metropolitan Administration (กทม) for their support and contributions!
