@@ -8,6 +8,10 @@ This **Data Science & Analysis** project is part of the **ChAMP Engineering Data
 
 ## 🚀 Project Overview
 
+**Problem:**
+* Which problems can be solved quickly but takes a long time to be resolved? Pinpoint the reason why.
+* Note: Only for Bangkok
+
 This project aims to improve the efficiency of **case resolution processes in Bangkok** by analyzing case duration data, detecting anomalies, uncovering patterns, and identifying cases that should have been resolved quickly. The analysis is divided into three main parts:
 
 ### **Part 1: Data Cleaning & Preparation**
@@ -30,31 +34,41 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 ## 🎯 Key Findings & Insights
 
 ### 🏙️ Top 5 Districts with the Most Cases
-1. **จตุจักร** 
-2. **ประเวศ**
-3. **บางแค** 
-4. **คลองเตย** 
-5. **วัฒนา**
+1. **Chatuchak (จตุจักร)** - 32,457 cases
+2. **Prawet (ประเวศ)** - 22,490 cases
+3. **Bang Khae (บางแค)** - 19,724 cases
+4. **Khlong Toei (คลองเตย)** - 19,668 cases
+5. **Watthana (วัฒนา)** - 19,508 cases
 
 (A Capture of plotly express interactive choropleth map)
 
 ![Heatmap Districts](heatmap_bkk_districts.png)
 
 ### 🏘️ Top 5 Subdistricts with the Most Cases
-1. **สวนหลวง** 
-2. **ดินแดง** 
-3. **สามเสนใน** 
-4. **ประเวศ** 
-5. **อนุสาวรีย์**
+1. **Suan Luang (สวนหลวง)** - 14,539 cases
+2. **Din Daeng (ดินแดง)** - 14,538 cases
+3. **Sam Sen Nai (สามเสนใน)** - 10,938 cases
+4. **Prawet (ประเวศ)** - 10,748 cases
+5. **Anusawari (อนุสาวรีย์)** - 10,583 cases
 
 (A Capture of plotly express interactive choropleth map)
 
 ![Heatmap Subdistricts](heatmap_bkk_subdistricts.png)
 
-### 🌆 Case Types Skewness and Outliers
-Certain case types exhibit **skewed resolution times**, leading to **delays** in their resolution.
+### 🌆 Case Types Skewness (after normalization) and Outliers
 
 ![Skewness Barchart](skewness_barchart.png)
+
+The bar chart illustrates the skewness for each case type after nomalizing the resolution duration.
+
+- **Most Positively Skewed Case Type:** *Billboards* (Skewness = **0.46**)  
+  - A **Positive skew** means that most cases in this category are resolved **quickly**, but a **few take significantly longer**, creating a long right tail in the distribution.
+  - This leads to the question: Why are some cases take much longer to solve than the majority in the type?
+
+- **Most Negatively Skewed Case Type:** *Electricity* (Skewness = **-0.89**)  
+  - A **Negative skew** indicates that most cases have a **longer resolution time**, with **only a few cases being resolved quickly**.
+  - This leads to the question: If it is possible to solve some cases so quickly, why do most cases in the type take so long to solve?
+
 
 ### 📊 Factors Affecting Case Duration
 From correlation analysis, the following variables show a **positive relationship** with longer case durations:
@@ -92,6 +106,8 @@ The project incorporates **Isolation Forest**, an unsupervised anomaly detection
   - Works well with **log-transformed duration data**.
   - Detects anomalies **without requiring predefined thresholds**.
   - Identifies both **upper and lower outliers**, making it ideal for this analysis.
+
+(An example of correlation heatmap for a type of issue)
 
 ![Correlation Heatmap fromML](correlation_heatmap_fromML.png)
 
