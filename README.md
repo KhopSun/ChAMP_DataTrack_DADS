@@ -78,7 +78,7 @@ The bar chart illustrates the skewness for each case type after nomalizing the r
 
 (An example of correlation heatmap considering upper outliers)
 
-![Billboards](correlation_heatmap_example.png)
+![Billboards](correlation_heatmap_outlier.png)
 
 #### **3) Unsupervised Machine Learning **
 
