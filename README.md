@@ -61,6 +61,18 @@ Considerations regarding cases that take too long to resolve can be separated in
 
 #### **1) Skewness of the distribution**
 
+After plotting bar charts, it is evident that the duration for each case type is extremely skewed.
+
+(An example of a bar chart of a case type before taking Log)
+
+![barchart before Log](barchart_beforeLog_1.png)
+
+Hence, the duration must be normalized by taking Log.
+
+(An example of a bar chart of a case type after taking Log)
+
+![barchart after Log](barchart_afterLog_1.png)
+
 The bar chart illustrates the skewness for each case type after nomalizing the resolution duration.
 
 ![Skewness Barchart](skewness_barchart.png)
