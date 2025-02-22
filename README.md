@@ -57,32 +57,28 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 
 ### 🌆 Cases with Extended Resolution Periods
 
-Considerations regarding cases that take too long to resolved can be separated into 3 ways:
+Considerations regarding cases that take too long to resolve can be separated into 3 ways:
 
-**1) Skewness of the distribution**
+#### **1) Skewness of the distribution**
 
 The bar chart illustrates the skewness for each case type after nomalizing the resolution duration.
 
 ![Skewness Barchart](skewness_barchart.png)
 
 - A **Positive skew** means that most cases in this category are resolved **quickly**, but a **few take significantly longer**, creating a long right tail in the distribution.
-  - This lead to the question: Why are some cases take much longer to solve than the majority in the type?
 - A **Negative skew** indicates that most cases have a **longer resolution time**, with **only a few cases being resolved quickly**.
-  - This lead to the question: If it is possible to solve some cases so quickly, why do most cases in the type take so long to solve?
 
 So, from the bar chart, the types to be further analyzed are:
 
 * Positively skewed: Billboards (Most positively skewed)
-  - Considering the durations of upper 5% cases to see why they took longer than the rest.
-
 * Negatively skewed: Electrivity (Most negatively skewed), Building and facilities, Consumer protection, Parking spaces, and Illegal Drugs
-  - Considering the durations cases, excluding lower 5%, to see why they took longer in general.
 
-**2) Outlier detection (For outliers of every type)**
+
+#### **2) Outlier detection (For outliers of every type)**
 
 - If any outliers were to exist, even after normalizing the distribution, they would be considered as taking too long to resolved.
 
-**3) Unsupervised Machine Learning **
+#### **3) Unsupervised Machine Learning **
 
 The project also incorporates **Isolation Forest**, an unsupervised anomaly detection model from **Scikit-Learn**, to detect cases with unusually long or short resolution times.
 
