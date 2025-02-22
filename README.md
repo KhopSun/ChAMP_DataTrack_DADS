@@ -55,7 +55,24 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 
 ![Heatmap Subdistricts](heatmap_bkk_subdistricts.png)
 
-### 🌆 Case Types Skewness (after normalization) and Outliers
+### 🌆 Cases with Extended Resolution Periods
+
+Considerations regarding cases that take too long to resolved can be separated into 3 ways:
+
+**1) Skewness of the distribution**
+
+* Positive skewness: Why are some cases take much longer to solve than the majority in the type?
+* Negative skewness: If it is possible to solve some cases so quickly, why do most cases in the type take so long to solve?
+
+So, from the bar chart, the types to be further analyzed are:
+
+* Positively skewed: Billboards
+* Negatively skewed: Electrivity, Building and facilities, Consumer protection, Parking spaces, and Illegal Drugs
+
+**2) Outlier detection (For outliers of every type)**
+
+**3) ML**
+
 
 ![Skewness Barchart](skewness_barchart.png)
 
@@ -63,11 +80,11 @@ The bar chart illustrates the skewness for each case type after nomalizing the r
 
 - **Most Positively Skewed Case Type:** *Billboards* (Skewness = **0.46**)  
   - A **Positive skew** means that most cases in this category are resolved **quickly**, but a **few take significantly longer**, creating a long right tail in the distribution.
-  - This leads to the question: Why are some cases take much longer to solve than the majority in the type?
 
 - **Most Negatively Skewed Case Type:** *Electricity* (Skewness = **-0.89**)  
   - A **Negative skew** indicates that most cases have a **longer resolution time**, with **only a few cases being resolved quickly**.
-  - This leads to the question: If it is possible to solve some cases so quickly, why do most cases in the type take so long to solve?
+
+- Additionally, if any outliers were to exist, even after normalizing the distribution, they would be considered as taking too long to resolved.
 
 
 ### 📊 Factors Affecting Case Duration
