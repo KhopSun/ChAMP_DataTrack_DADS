@@ -68,9 +68,17 @@ The bar chart illustrates the skewness for each case type after nomalizing the r
 - A **Positive skew** means that most cases in this category are resolved **quickly**, but a **few take significantly longer**, creating a long right tail in the distribution.
 - A **Negative skew** indicates that most cases have a **longer resolution time**, with **only a few cases being resolved quickly**.
 
+(An example of correlation heatmap considering positively skewed distribution)
+
+![Billboards](correlation_heatmap_example.png)
+
 #### **2) Outlier detection (For outliers of every type)**
 
 - If any outliers were to exist, even after normalizing the distribution, they would be considered as taking too long to resolved.
+
+(An example of correlation heatmap considering upper outliers)
+
+![Billboards](correlation_heatmap_example.png)
 
 #### **3) Unsupervised Machine Learning **
 
@@ -81,7 +89,7 @@ The project also incorporates **Isolation Forest**, an unsupervised anomaly dete
   - Detects anomalies **without requiring predefined thresholds**.
   - Identifies both **upper and lower outliers**, making it ideal for this analysis.
  
-(An example of correlation heatmap for a type of issue from )
+(An example of correlation heatmap for anamolies in a type)
 
 ![Correlation Heatmap fromML](correlation_heatmap_fromML.png)
 
