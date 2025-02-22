@@ -68,12 +68,6 @@ The bar chart illustrates the skewness for each case type after nomalizing the r
 - A **Positive skew** means that most cases in this category are resolved **quickly**, but a **few take significantly longer**, creating a long right tail in the distribution.
 - A **Negative skew** indicates that most cases have a **longer resolution time**, with **only a few cases being resolved quickly**.
 
-So, from the bar chart, the types to be further analyzed are:
-
-* Positively skewed: Billboards (Most positively skewed)
-* Negatively skewed: Electrivity (Most negatively skewed), Building and facilities, Consumer protection, Parking spaces, and Illegal Drugs
-
-
 #### **2) Outlier detection (For outliers of every type)**
 
 - If any outliers were to exist, even after normalizing the distribution, they would be considered as taking too long to resolved.
