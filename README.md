@@ -98,7 +98,7 @@ The project also incorporates **Isolation Forest**, an unsupervised anomaly dete
 From correlation analysis, the following variables show a **positive relationship** with longer case durations:
 - **Organizations Involved (`organization_action_len`)** → More organization being involved may correlate with inefficiencies in processing.
 - **Number of Reopens (`count_reopen`)** → Cases that are repeatedly reopened take significantly longer to resolve.
-- **View Count (`view_count`)** → High public engagement might indicate complex cases requiring more time.
+- **View Count (`view_count`)** → High public engagement might indicate complex cases requiring more time (only for some type).
 
 ### 💡 Suggested Solutions
 
