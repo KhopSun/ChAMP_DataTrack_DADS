@@ -1,6 +1,6 @@
 # 🕒 ChAMP Engineering Data Track: Case Duration Outlier Detection & Correlation Analysis (Traffy Fondou)
 
-This **Data Science & Analysis** project is part of the **ChAMP Engineering Data Track**, utilizing real-world data from **Bangkok Metropolitan Administration (กทม)** to identify insights, diagnose potential inefficiencies, and propose actionable solutions regarding case resolution times.
+This **Data Science & Data Analysis** project is part of the **ChAMP Engineering Data Track**, utilizing real-world data from **Bangkok Metropolitan Administration (กทม)** to identify insights, diagnose potential inefficiencies, and propose actionable solutions regarding case resolution times.
 
 **Dataset Period:** May 2022 - December 2024
 
@@ -26,7 +26,7 @@ This project aims to improve the efficiency of **case resolution processes in Ba
 ### **Part 3: Outlier Detection & Correlation Analysis**
 1. **Outlier Detection:** Identifying cases that take significantly longer than usual to resolve using **statistical methods (IQR, percentile thresholds)** and **machine learning (Isolation Forest)**.
 2. **Correlation Analysis:** Exploring relationships between case duration and key factors such as **reopens, view counts, and organizational actions** to determine possible causes of delays.
-3. **Filtering & Comparative Analysis:** Investigating specific case types (e.g., **Billboards, Electricity, Road and Sidewalk**) and filtering data by percentile-based thresholds (e.g., **inpexcting upper 5% cases**).
+3. **Filtering & Comparative Analysis:** Investigating specific case types (e.g., **Billboards and Electricity as they are some of the most skewed**) and filtering data by percentile-based thresholds (e.g., **inpexcting upper 5% cases**).
 4. **Data-Driven Recommendations:** Providing insights into why some cases take longer to resolve and **suggesting potential solutions** for efficiency improvement.
 
 ---
@@ -61,30 +61,39 @@ Considerations regarding cases that take too long to resolved can be separated i
 
 **1) Skewness of the distribution**
 
-* Positive skewness: Why are some cases take much longer to solve than the majority in the type?
-* Negative skewness: If it is possible to solve some cases so quickly, why do most cases in the type take so long to solve?
-
-So, from the bar chart, the types to be further analyzed are:
-
-* Positively skewed: Billboards
-* Negatively skewed: Electrivity, Building and facilities, Consumer protection, Parking spaces, and Illegal Drugs
-
-**2) Outlier detection (For outliers of every type)**
-
-**3) ML**
-
+The bar chart illustrates the skewness for each case type after nomalizing the resolution duration.
 
 ![Skewness Barchart](skewness_barchart.png)
 
-The bar chart illustrates the skewness for each case type after nomalizing the resolution duration.
+- A **Positive skew** means that most cases in this category are resolved **quickly**, but a **few take significantly longer**, creating a long right tail in the distribution.
+  - This lead to the question: Why are some cases take much longer to solve than the majority in the type?
+- A **Negative skew** indicates that most cases have a **longer resolution time**, with **only a few cases being resolved quickly**.
+  - This lead to the question: If it is possible to solve some cases so quickly, why do most cases in the type take so long to solve?
 
-- **Most Positively Skewed Case Type:** *Billboards* (Skewness = **0.46**)  
-  - A **Positive skew** means that most cases in this category are resolved **quickly**, but a **few take significantly longer**, creating a long right tail in the distribution.
+So, from the bar chart, the types to be further analyzed are:
 
-- **Most Negatively Skewed Case Type:** *Electricity* (Skewness = **-0.89**)  
-  - A **Negative skew** indicates that most cases have a **longer resolution time**, with **only a few cases being resolved quickly**.
+* Positively skewed: Billboards (Most positively skewed)
+  - Considering the durations of upper 5% cases to see why they took longer than the rest.
 
-- Additionally, if any outliers were to exist, even after normalizing the distribution, they would be considered as taking too long to resolved.
+* Negatively skewed: Electrivity (Most negatively skewed), Building and facilities, Consumer protection, Parking spaces, and Illegal Drugs
+  - Considering the durations cases, excluding lower 5%, to see why they took longer in general.
+
+**2) Outlier detection (For outliers of every type)**
+
+- If any outliers were to exist, even after normalizing the distribution, they would be considered as taking too long to resolved.
+
+**3) Unsupervised Machine Learning **
+
+The project also incorporates **Isolation Forest**, an unsupervised anomaly detection model from **Scikit-Learn**, to detect cases with unusually long or short resolution times.
+
+- **Why Isolation Forest?**
+  - Works well with **log-transformed duration data**.
+  - Detects anomalies **without requiring predefined thresholds**.
+  - Identifies both **upper and lower outliers**, making it ideal for this analysis.
+ 
+(An example of correlation heatmap for a type of issue from )
+
+![Correlation Heatmap fromML](correlation_heatmap_fromML.png)
 
 
 ### 📊 Factors Affecting Case Duration
@@ -93,11 +102,8 @@ From correlation analysis, the following variables show a **positive relationshi
 - **Number of Reopens (`count_reopen`)** → Cases that are repeatedly reopened take significantly longer to resolve.
 - **View Count (`view_count`)** → High public engagement might indicate complex cases requiring more time.
 
-(An example of correlation heatmap for a type of issue)
-
-![Correlation Heatmap Example](correlation_heatmap_example.png)
-
 ### 💡 Suggested Solutions
+
 - **Process Streamlining:** Identify types of **organizational actions** that contribute to longer delays and optimize workflows. Possible solutions for this include clearly defining the area of responsibilities for each organization so that users would know to whom the cases should be reported, while the organizations know which cases they are responsible for.
 - **Prioritization Strategy:** Focus on **frequently reopened cases** and introduce measures to resolve them effectively. This can help prevent similar cases being repeatedly reopened as well.
 - **Public Engagement Analysis:** Evaluate whether high **view counts** correlate with complex cases and allocate resources accordingly. This shows that people are interested to know whether the particular cases are resolved or not.
@@ -112,21 +118,6 @@ While the current analysis focuses on **outlier detection and correlations**, ad
 - **Time-Based Trends:** Examining whether **certain times of the year or specific days of the week** impact response efficiency.
 
 Incorporating these additional analyses could further refine our understanding of case resolution inefficiencies and guide more effective solutions.
-
----
-
-## 🤖 Machine Learning Model
-
-The project incorporates **Isolation Forest**, an unsupervised anomaly detection model from **Scikit-Learn**, to detect cases with unusually long or short resolution times.
-
-- **Why Isolation Forest?**
-  - Works well with **log-transformed duration data**.
-  - Detects anomalies **without requiring predefined thresholds**.
-  - Identifies both **upper and lower outliers**, making it ideal for this analysis.
-
-(An example of correlation heatmap for a type of issue)
-
-![Correlation Heatmap fromML](correlation_heatmap_fromML.png)
 
 ---
 
