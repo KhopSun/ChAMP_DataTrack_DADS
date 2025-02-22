@@ -73,7 +73,8 @@ Hence, the duration must be normalized by taking Log.
 
 ![barchart after Log](barchart_afterLog_1.png)
 
-The bar chart illustrates the skewness for each case type after nomalizing the resolution duration.
+Then, it is observed whether the duration distribution for each type still exhibits skewness or not.
+The bar chart below illustrates the skewness for each case type after nomalizing the resolution duration.
 
 ![Skewness Barchart](skewness_barchart.png)
 
