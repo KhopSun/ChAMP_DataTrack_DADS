@@ -80,7 +80,7 @@ The bar chart illustrates the skewness for each case type after nomalizing the r
 
 ![Billboards](correlation_heatmap_outlier.png)
 
-#### **3) Unsupervised Machine Learning **
+#### **3) Unsupervised Machine Learning**
 
 The project also incorporates **Isolation Forest**, an unsupervised anomaly detection model from **Scikit-Learn**, to detect cases with unusually long or short resolution times.
 
